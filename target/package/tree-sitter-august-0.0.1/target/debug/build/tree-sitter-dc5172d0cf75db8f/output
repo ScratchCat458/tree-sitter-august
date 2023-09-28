@@ -1,0 +1,268 @@
+cargo:rerun-if-env-changed=TREE_SITTER_STATIC_ANALYSIS
+cargo:rerun-if-changed=src\alloc.c
+cargo:rerun-if-changed=src\alloc.h
+cargo:rerun-if-changed=src\array.h
+cargo:rerun-if-changed=src\atomic.h
+cargo:rerun-if-changed=src\clock.h
+cargo:rerun-if-changed=src\error_costs.h
+cargo:rerun-if-changed=src\get_changed_ranges.c
+cargo:rerun-if-changed=src\get_changed_ranges.h
+cargo:rerun-if-changed=src\host.h
+cargo:rerun-if-changed=src\language.c
+cargo:rerun-if-changed=src\language.h
+cargo:rerun-if-changed=src\length.h
+cargo:rerun-if-changed=src\lexer.c
+cargo:rerun-if-changed=src\lexer.h
+cargo:rerun-if-changed=src\lib.c
+cargo:rerun-if-changed=src\node.c
+cargo:rerun-if-changed=src\parser.c
+cargo:rerun-if-changed=src\point.h
+cargo:rerun-if-changed=src\query.c
+cargo:rerun-if-changed=src\reduce_action.h
+cargo:rerun-if-changed=src\reusable_node.h
+cargo:rerun-if-changed=src\stack.c
+cargo:rerun-if-changed=src\stack.h
+cargo:rerun-if-changed=src\subtree.c
+cargo:rerun-if-changed=src\subtree.h
+cargo:rerun-if-changed=src\tree.c
+cargo:rerun-if-changed=src\tree.h
+cargo:rerun-if-changed=src\tree_cursor.c
+cargo:rerun-if-changed=src\tree_cursor.h
+cargo:rerun-if-changed=src\unicode
+cargo:rerun-if-changed=src\unicode.h
+TARGET = Some("x86_64-pc-windows-msvc")
+OPT_LEVEL = Some("0")
+HOST = Some("x86_64-pc-windows-msvc")
+cargo:rerun-if-env-changed=CC_x86_64-pc-windows-msvc
+CC_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CC_x86_64_pc_windows_msvc
+CC_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+DEBUG = Some("true")
+cargo:rerun-if-env-changed=CFLAGS_x86_64-pc-windows-msvc
+CFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_pc_windows_msvc
+CFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=CC_x86_64-pc-windows-msvc
+CC_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CC_x86_64_pc_windows_msvc
+CC_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+cargo:rerun-if-env-changed=CFLAGS_x86_64-pc-windows-msvc
+CFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_pc_windows_msvc
+CFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=CC_x86_64-pc-windows-msvc
+CC_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CC_x86_64_pc_windows_msvc
+CC_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+cargo:rerun-if-env-changed=CFLAGS_x86_64-pc-windows-msvc
+CFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_pc_windows_msvc
+CFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "src" "-I" "include" "-W4" "-FoC:\\Users\\Hayden Brown\\Documents\\GitHub\\august\\tree-sitter-august\\target\\package\\tree-sitter-august-0.0.1\\target\\debug\\build\\tree-sitter-dc5172d0cf75db8f\\out\\src\\lib.o" "-c" "src\\lib.c"
+lib.c
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./alloc.c(35): warning C4232: nonstandard extension used: 'ts_current_free': address of dllimport 'free' is not static, identity not guaranteed
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt\corecrt_malloc.h(89): note: see declaration of 'free'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.h(35): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.h(146): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.h(153): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./language.h(86): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./language.h(83): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./node.c(111): warning C4244: 'initializing': conversion from 'uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./node.c(415): warning C4244: 'initializing': conversion from 'uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./node.c(421): warning C4244: 'initializing': conversion from 'uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./node.c(443): warning C4244: 'initializing': conversion from 'uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./parser.c(580): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./parser.c(874): warning C4456: declaration of 'children' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./parser.c(858): note: see declaration of 'children'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./parser.c(997): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./parser.c(992): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./parser.c(1015): warning C4244: '=': conversion from 'const uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./parser.c(1021): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./parser.c(992): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./parser.c(1044): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./parser.c(992): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./parser.c(1818): warning C4996: 'fdopen': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _fdopen. See online help for details.
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(334): warning C4244: 'function': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(338): warning C4244: '=': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(369): warning C4244: 'function': conversion from 'int32_t' to 'wint_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(384): warning C4244: 'function': conversion from 'int32_t' to 'wint_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(391): warning C4244: 'function': conversion from 'int32_t' to 'wint_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(401): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(469): warning C4244: 'return': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(791): warning C4244: 'return': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1419): warning C4456: declaration of 'exists' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1253): note: see declaration of 'exists'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1421): warning C4456: declaration of 'exists' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1253): note: see declaration of 'exists'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1459): warning C4244: '=': conversion from 'unsigned int' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1683): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1671): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1683): warning C4456: declaration of 'exists' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1679): note: see declaration of 'exists'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1746): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1671): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1746): warning C4456: declaration of 'exists' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1679): note: see declaration of 'exists'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1515): warning C4244: 'initializing': conversion from 'const uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1672): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1970): warning C4244: '=': conversion from 'unsigned int' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(1996): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2098): warning C4456: declaration of 'length' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2067): note: see declaration of 'length'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2121): warning C4456: declaration of 'id' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2068): note: see declaration of 'id'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2136): warning C4456: declaration of 'length' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2067): note: see declaration of 'length'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2137): warning C4456: declaration of 'id' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2068): note: see declaration of 'id'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2067): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2098): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2136): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2181): warning C4244: 'initializing': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2225): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2237): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2238): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2336): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2440): warning C4244: 'function': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2472): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2492): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2572): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2573): warning C4244: '=': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2586): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2587): warning C4244: '=': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2596): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2610): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2305): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2356): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2389): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2419): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2500): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2619): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2754): warning C4456: declaration of 'step' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2732): note: see declaration of 'step'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2763): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2764): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2833): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2842): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2850): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(2939): warning C4244: 'function': conversion from 'int' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3063): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3126): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3130): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3227): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3278): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3288): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3336): warning C4244: 'function': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3326): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3356): warning C4018: '>': signed/unsigned mismatch
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3405): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3476): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3594): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3568): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3666): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3751): warning C4456: declaration of 'state' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3595): note: see declaration of 'state'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3752): warning C4456: declaration of 'next_step' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3743): note: see declaration of 'next_step'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3792): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3568): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3831): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3845): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3919): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3922): warning C4244: '=': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3923): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3937): warning C4244: 'function': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3951): warning C4244: 'function': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3990): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(3997): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(4043): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(4046): warning C4244: '=': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./query.c(4061): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./stack.c(336): warning C4456: declaration of 'iterator' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./stack.c(319): note: see declaration of 'iterator'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(182): warning C4244: 'initializing': conversion from 'TSSymbol' to 'uint8_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(185): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(183): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(186): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(232): warning C4244: '=': conversion from 'TSSymbol' to 'uint8_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(492): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(494): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(516): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(533): warning C4244: 'initializing': conversion from 'unsigned int' to 'uint16_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(648): warning C4459: declaration of 'StackEntry' hides global declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./reusable_node.h(7): note: see declaration of 'StackEntry'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(662): warning C4457: declaration of 'edit' hides function parameter
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(644): note: see declaration of 'edit'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(708): warning C4244: '=': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(709): warning C4244: '=': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(710): warning C4244: '=': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(711): warning C4244: '=': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(903): warning C4457: declaration of 'alias_symbol' hides function parameter
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(836): note: see declaration of 'alias_symbol'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(906): warning C4457: declaration of 'alias_is_named' hides function parameter
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(836): note: see declaration of 'alias_is_named'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(911): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(894): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(995): warning C4457: declaration of 'alias_symbol' hides function parameter
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./subtree.c(954): note: see declaration of 'alias_symbol'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./tree_cursor.c(368): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./tree_cursor.c(291): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./tree_cursor.c(378): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./tree_cursor.c(291): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./tree_cursor.c(448): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\./tree_cursor.c(423): note: see declaration of 'i'
+C:\Users\Hayden Brown\.cargo\registry\src\index.crates.io-6f17d22bba15001f\tree-sitter-0.20.10\src\tree_cursor.c(130) : warning C4702: unreachable code
+exit code: 0
+cargo:rerun-if-env-changed=AR_x86_64-pc-windows-msvc
+AR_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=AR_x86_64_pc_windows_msvc
+AR_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64-pc-windows-msvc
+ARFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64_pc_windows_msvc
+ARFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\lib.exe" "-out:C:\\Users\\Hayden Brown\\Documents\\GitHub\\august\\tree-sitter-august\\target\\package\\tree-sitter-august-0.0.1\\target\\debug\\build\\tree-sitter-dc5172d0cf75db8f\\out\\libtree-sitter.a" "-nologo" "C:\\Users\\Hayden Brown\\Documents\\GitHub\\august\\tree-sitter-august\\target\\package\\tree-sitter-august-0.0.1\\target\\debug\\build\\tree-sitter-dc5172d0cf75db8f\\out\\src\\lib.o"
+exit code: 0
+cargo:rustc-link-lib=static=tree-sitter
+cargo:rustc-link-search=native=C:\Users\Hayden Brown\Documents\GitHub\august\tree-sitter-august\target\package\tree-sitter-august-0.0.1\target\debug\build\tree-sitter-dc5172d0cf75db8f\out
