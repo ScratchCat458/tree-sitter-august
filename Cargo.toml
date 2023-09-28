@@ -4,17 +4,13 @@ description = "August grammar for the tree-sitter parsing library"
 version = "0.0.1"
 keywords = ["incremental", "parsing", "august"]
 categories = ["parsing", "text-editors"]
-repository = "https://github.com/tree-sitter/tree-sitter-august"
+repository = "https://github.com/ScratchCat458/tree-sitter-august"
 edition = "2018"
 license = "MIT"
+authors = ["Hayden Brown <scratchcat458@gmail.com>"]
 
 build = "bindings/rust/build.rs"
-include = [
-  "bindings/rust/*",
-  "grammar.js",
-  "queries/*",
-  "src/*",
-]
+include = ["bindings/rust/*", "grammar.js", "queries/*", "src/*"]
 
 [lib]
 path = "bindings/rust/lib.rs"
