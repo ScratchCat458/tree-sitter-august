@@ -1,10 +1,5 @@
 [
   {
-    "type": "boolean_literal",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "cmd_arg",
     "named": true,
     "fields": {},
@@ -13,15 +8,19 @@
       "required": true,
       "types": [
         {
-          "type": "boolean_literal",
+          "type": "ident",
           "named": true
         },
         {
-          "type": "integer_literal",
+          "type": "meta_attr",
           "named": true
         },
         {
-          "type": "string_literal",
+          "type": "raw_ident",
+          "named": true
+        },
+        {
+          "type": "str_lit",
           "named": true
         }
       ]
@@ -30,62 +29,31 @@
   {
     "type": "cmd_call",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "cmd_external",
-          "named": true
-        },
-        {
-          "type": "cmd_internal",
-          "named": true
-        },
-        {
-          "type": "cmd_local",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "cmd_external",
-    "named": true,
     "fields": {
-      "cmd_name": {
+      "name": {
         "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "identifier",
+            "type": "@",
+            "named": false
+          },
+          {
+            "type": "ident",
             "named": true
+          },
+          {
+            "type": "~",
+            "named": false
           }
         ]
       },
-      "module_name": {
+      "ns": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "cmd_internal",
-    "named": true,
-    "fields": {
-      "cmd_name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
+            "type": "ident",
             "named": true
           }
         ]
@@ -103,107 +71,44 @@
     }
   },
   {
-    "type": "cmd_local",
+    "type": "expose",
     "named": true,
     "fields": {
-      "cmd_name": {
+      "unit": {
         "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "cmddef_definition",
-    "named": true,
-    "fields": {
-      "cmddef_name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
+            "type": "ident",
             "named": true
           }
         ]
       }
     },
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
-          "type": "cmd_call",
+          "type": "ident",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "link_definition",
+    "type": "meta_attr",
     "named": true,
-    "fields": {
-      "module_name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "namespace_definition",
-    "named": true,
-    "fields": {
-      "namespace": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "pragma_definition",
-    "named": true,
-    "fields": {
-      "job_name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      },
-      "pragma_job": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "build",
-            "named": false
-          },
-          {
-            "type": "test",
-            "named": false
-          }
-        ]
-      }
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -215,48 +120,26 @@
       "required": false,
       "types": [
         {
-          "type": "cmddef_definition",
+          "type": "expose",
           "named": true
         },
         {
-          "type": "link_definition",
-          "named": true
-        },
-        {
-          "type": "namespace_definition",
-          "named": true
-        },
-        {
-          "type": "pragma_definition",
-          "named": true
-        },
-        {
-          "type": "task_definition",
+          "type": "unit",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "task_definition",
+    "type": "unit",
     "named": true,
     "fields": {
-      "task_deps": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "task_deps",
-            "named": true
-          }
-        ]
-      },
-      "task_name": {
+      "name": {
         "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "identifier",
+            "type": "ident",
             "named": true
           }
         ]
@@ -272,30 +155,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "task_deps",
-    "named": true,
-    "fields": {
-      "dep_name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "#link",
-    "named": false
-  },
-  {
-    "type": "#pragma",
-    "named": false
   },
   {
     "type": "(",
@@ -310,15 +169,7 @@
     "named": false
   },
   {
-    "type": ".",
-    "named": false
-  },
-  {
-    "type": ":",
-    "named": false
-  },
-  {
-    "type": ";",
+    "type": "::",
     "named": false
   },
   {
@@ -326,55 +177,27 @@
     "named": false
   },
   {
-    "type": "False",
+    "type": "as",
     "named": false
   },
   {
-    "type": "Task",
+    "type": "expose",
     "named": false
   },
   {
-    "type": "True",
-    "named": false
-  },
-  {
-    "type": "[",
-    "named": false
-  },
-  {
-    "type": "]",
-    "named": false
-  },
-  {
-    "type": "build",
-    "named": false
-  },
-  {
-    "type": "cmddef",
-    "named": false
-  },
-  {
-    "type": "false",
-    "named": false
-  },
-  {
-    "type": "identifier",
+    "type": "ident",
     "named": true
   },
   {
-    "type": "integer_literal",
+    "type": "raw_ident",
     "named": true
   },
   {
-    "type": "string_literal",
+    "type": "str_lit",
     "named": true
   },
   {
-    "type": "test",
-    "named": false
-  },
-  {
-    "type": "true",
+    "type": "unit",
     "named": false
   },
   {
@@ -383,6 +206,10 @@
   },
   {
     "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
     "named": false
   }
 ]

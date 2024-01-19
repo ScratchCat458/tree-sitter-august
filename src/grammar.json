@@ -13,27 +13,40 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "pragma_definition"
+          "name": "unit"
         },
         {
           "type": "SYMBOL",
-          "name": "link_definition"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "namespace_definition"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "task_definition"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "cmddef_definition"
+          "name": "expose"
         }
       ]
     },
-    "namespace_definition": {
+    "expose": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "expose"
+        },
+        {
+          "type": "FIELD",
+          "name": "unit",
+          "content": {
+            "type": "SYMBOL",
+            "name": "ident"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "as"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ident"
+        }
+      ]
+    },
+    "meta_attr": {
       "type": "SEQ",
       "members": [
         {
@@ -41,172 +54,24 @@
           "value": "@"
         },
         {
-          "type": "FIELD",
-          "name": "namespace",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
+          "type": "SYMBOL",
+          "name": "ident"
         }
       ]
     },
-    "link_definition": {
+    "unit": {
       "type": "SEQ",
       "members": [
         {
           "type": "STRING",
-          "value": "#link"
+          "value": "unit"
         },
         {
           "type": "FIELD",
-          "name": "module_name",
+          "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
-          }
-        }
-      ]
-    },
-    "pragma_definition": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "#pragma"
-        },
-        {
-          "type": "FIELD",
-          "name": "pragma_job",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "build"
-              },
-              {
-                "type": "STRING",
-                "value": "test"
-              }
-            ]
-          }
-        },
-        {
-          "type": "FIELD",
-          "name": "job_name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
-        }
-      ]
-    },
-    "task_definition": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "Task"
-        },
-        {
-          "type": "FIELD",
-          "name": "task_name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "FIELD",
-              "name": "task_deps",
-              "content": {
-                "type": "SYMBOL",
-                "name": "task_deps"
-              }
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "STRING",
-          "value": "{"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "cmd_call"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "}"
-        }
-      ]
-    },
-    "task_deps": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ":"
-        },
-        {
-          "type": "STRING",
-          "value": "["
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "FIELD",
-                "name": "dep_name",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "identifier"
-                }
-              },
-              {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "STRING",
-                    "value": ","
-                  },
-                  {
-                    "type": "BLANK"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "]"
-        }
-      ]
-    },
-    "cmddef_definition": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "cmddef"
-        },
-        {
-          "type": "FIELD",
-          "name": "cmddef_name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
+            "name": "ident"
           }
         },
         {
@@ -227,31 +92,52 @@
       ]
     },
     "cmd_call": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "cmd_internal"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "cmd_local"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "cmd_external"
-        }
-      ]
-    },
-    "cmd_internal": {
       "type": "SEQ",
       "members": [
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "FIELD",
+                  "name": "ns",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "ident"
+                  }
+                },
+                {
+                  "type": "STRING",
+                  "value": "::"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "FIELD",
-          "name": "cmd_name",
+          "name": "name",
           "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "~"
+              },
+              {
+                "type": "STRING",
+                "value": "@"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "ident"
+              }
+            ]
           }
         },
         {
@@ -268,56 +154,6 @@
         {
           "type": "STRING",
           "value": ")"
-        },
-        {
-          "type": "STRING",
-          "value": ";"
-        }
-      ]
-    },
-    "cmd_local": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "FIELD",
-          "name": "cmd_name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": ";"
-        }
-      ]
-    },
-    "cmd_external": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "FIELD",
-          "name": "module_name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "."
-        },
-        {
-          "type": "FIELD",
-          "name": "cmd_name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": ";"
         }
       ]
     },
@@ -329,15 +165,19 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "string_literal"
+              "name": "meta_attr"
             },
             {
               "type": "SYMBOL",
-              "name": "integer_literal"
+              "name": "str_lit"
             },
             {
               "type": "SYMBOL",
-              "name": "boolean_literal"
+              "name": "ident"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "raw_ident"
             }
           ]
         },
@@ -355,38 +195,17 @@
         }
       ]
     },
-    "string_literal": {
+    "str_lit": {
       "type": "PATTERN",
       "value": "\".*\""
     },
-    "integer_literal": {
+    "ident": {
       "type": "PATTERN",
-      "value": "\\d+"
+      "value": "[A-Za-z-_]+"
     },
-    "boolean_literal": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "True"
-        },
-        {
-          "type": "STRING",
-          "value": "False"
-        },
-        {
-          "type": "STRING",
-          "value": "true"
-        },
-        {
-          "type": "STRING",
-          "value": "false"
-        }
-      ]
-    },
-    "identifier": {
+    "raw_ident": {
       "type": "PATTERN",
-      "value": "[A-Za-z-_~]+"
+      "value": "[!-&*-+--.0-;=?-Z^-z|]+"
     },
     "encap": {
       "type": "PATTERN",
