@@ -120,6 +120,10 @@
       "required": false,
       "types": [
         {
+          "type": "cmd_call",
+          "named": true
+        },
+        {
           "type": "expose",
           "named": true
         },

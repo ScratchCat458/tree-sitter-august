@@ -6,7 +6,8 @@ module.exports = grammar({
     _defintion: ($) =>
       choice(
         $.unit,
-        $.expose
+        $.expose,
+        $.cmd_call
       ),
 
     expose: ($) => seq("expose", field("unit", $.ident), "as", $.ident),

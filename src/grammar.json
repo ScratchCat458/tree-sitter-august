@@ -18,6 +18,10 @@
         {
           "type": "SYMBOL",
           "name": "expose"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "cmd_call"
         }
       ]
     },
