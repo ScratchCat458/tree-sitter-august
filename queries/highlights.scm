@@ -1,41 +1,23 @@
 [
-    "#pragma"
-    "#link"
-    "Task"
-    "cmddef"
+    "unit"
+    "expose"
+    "as"
 ] @keyword
 
-[
-    "cmddef"
-] @keyword.function
+(encap) @punctuation.bracket
 
 [
-    "("
-    ")"
-    "["
-    "]"
-    "{"
-    "}"
-] @punctuation.bracket
-
-[
-    ";"
-    "."
     ","
+    "::"
 ] @punctuation.delimiter
 
-(namespace_definition namespace: (identifier)) @namespace
+(meta_attr) @attribute
 
-(link_definition) @include
+(expose unit: (ident))
+(unit name: (ident) @function)
 
-(pragma_definition) @define
-
-(task_definition task_name: (identifier) @function.method) @function
-(cmddef_definition cmddef_name: (identifier) @function.method) @function
-
-(cmd_call) @function.call
-
-
-(integer_literal) @number
-(string_literal) @string
-(boolean_literal) @boolean
+(cmd_call ns: (ident) @namespace name: (ident) @function.call)
+(cmd_call name: (ident) @function.call)
+(cmd_call name: ("~") @function.call)
+(cmd_call name: ("@") @function.call)
+(str_lit) @string
