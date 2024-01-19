@@ -1,0 +1,36 @@
+expose Build as build
+expose Test as test
+
+unit Build {
+  meta(
+    @name "cargo::Build"
+    @desc "Runs `cargo build`"
+    @deps "[Test]"
+  )
+
+  depends_on(Test)
+
+  fs::eprint_file("Cargo.toml")
+  exec(cargo build)
+}
+
+unit Test {
+  meta(
+    @name "cargo::Test"
+    @desc "Runs `cargo test`"
+    @calls "[cargo::Lints]"
+  )
+
+  do(Lints)
+  exec(cargo test)
+}
+
+unit Lints {
+  meta(
+    @name "cargo::Lints"
+    @desc "Runs `cargo fmt` and `cargo clippy`"
+  )
+
+  ~(cargo fmt)
+  ~(cargo clippy)
+}
