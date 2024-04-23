@@ -23,17 +23,41 @@ module.exports = grammar({
         "}"
       ),
 
-    cmd_call: ($) => seq(optional(seq(field("ns", $.ident), "::")), field("name", choice("~", "@", $.ident)), "(", repeat($.cmd_arg), ")"),
+    cmd_call: ($) => seq(optional(seq(field("ns", $.ident), "::")), field("name", choice("~", "@", $.ident)), "(", sepBy(",", $.cmd_arg), ")"),
 
-    cmd_arg: ($) =>
-      seq(
-        choice($.meta_attr, $.str_lit, $.ident, $.raw_ident),
-        optional(",")
-      ),
+    cmd_arg: ($) => choice($.meta_attr, $.str_lit, $.ident, $.raw_ident),
 
-    str_lit: ($) => /".*"/,
+    str_lit: ($) => /"[^"]*"/,
     ident: ($) => /[A-Za-z-_]+/,
     raw_ident: ($) => /[!-&*-+--.0-;=?-Z^-z|]+/,
     encap: ($) => /[\(\)\[\]{}<>]/,
   },
 });
+
+// From tree-sitter-rust
+/**
+ * Creates a rule to match one or more of the rules separated by the separator.
+ *
+ * @param {RuleOrLiteral} sep - The separator to use.
+ * @param {RuleOrLiteral} rule
+ *
+ * @return {SeqRule}
+ *
+ */
+function sepBy1(sep, rule) {
+  return seq(rule, repeat(seq(sep, rule)));
+}
+
+
+/**
+ * Creates a rule to optionally match one or more of the rules separated by the separator.
+ *
+ * @param {RuleOrLiteral} sep - The separator to use.
+ * @param {RuleOrLiteral} rule
+ *
+ * @return {ChoiceRule}
+ *
+ */
+function sepBy(sep, rule) {
+  return optional(sepBy1(sep, rule));
+}
