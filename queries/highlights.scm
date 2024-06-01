@@ -20,4 +20,7 @@
 (cmd_call name: (ident) @function.call)
 (cmd_call name: ("~") @function.call)
 (cmd_call name: ("@") @function.call)
+
+(block name: (ident) @function.call)
+
 (str_lit) @string

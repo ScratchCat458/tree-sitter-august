@@ -23,9 +23,14 @@ module.exports = grammar({
         "}"
       ),
 
-    cmd_call: ($) => seq(optional(seq(field("ns", $.ident), "::")), field("name", choice("~", "@", $.ident)), "(", sepBy(",", $.cmd_arg), ")"),
+    cmd_call: ($) => choice(
+      seq(optional(seq(field("ns", $.ident), "::")), field("name", choice("~", "@", $.ident)), "(", repeat(seq($.cmd_arg, optional(","))), ")"),
+      $.block
+    ),
 
     cmd_arg: ($) => choice($.meta_attr, $.str_lit, $.ident, $.raw_ident),
+
+    block: $ => seq(field("name", $.ident), "{", choice(repeat($.cmd_call)), "}"),
 
     str_lit: ($) => /"[^"]*"/,
     ident: ($) => /[A-Za-z-_]+/,
