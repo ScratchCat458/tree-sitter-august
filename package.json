@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-august",
-  "version": "1.0.0",
+  "version": "0.0.6",
   "description": "Treesitter support for August",
   "main": "bindings/node",
   "scripts": {
