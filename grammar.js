@@ -28,7 +28,7 @@ module.exports = grammar({
       $.block
     ),
 
-    cmd_arg: ($) => choice($.meta_attr, $.str_lit, $.ident, $.raw_ident),
+    cmd_arg: ($) => choice($.meta_attr, $.str_lit, $.ident, /[\[\]{}<>]/, "=>", $.raw_ident),
 
     block: $ => seq(field("name", $.ident), "{", choice(repeat($.cmd_call)), "}"),
 

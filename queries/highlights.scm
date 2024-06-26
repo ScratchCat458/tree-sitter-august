@@ -2,14 +2,14 @@
     "unit"
     "expose"
     "as"
-] @keyword
-
+]
 (encap) @punctuation.bracket
 
 [
     ","
     "::"
 ] @punctuation.delimiter
+"=>" @punctuation.delimiter
 
 (meta_attr) @attribute
 

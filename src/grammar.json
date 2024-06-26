@@ -203,6 +203,14 @@
           "name": "ident"
         },
         {
+          "type": "PATTERN",
+          "value": "[\\[\\]{}<>]"
+        },
+        {
+          "type": "STRING",
+          "value": "=>"
+        },
+        {
           "type": "SYMBOL",
           "name": "raw_ident"
         }

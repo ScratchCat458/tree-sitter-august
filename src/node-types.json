@@ -31,7 +31,7 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "ident",
@@ -204,6 +204,10 @@
   },
   {
     "type": "::",
+    "named": false
+  },
+  {
+    "type": "=>",
     "named": false
   },
   {

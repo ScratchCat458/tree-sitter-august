@@ -34,3 +34,10 @@ unit Lints {
   ~(cargo fmt)
   ~(cargo clippy)
 }
+
+unit Expand {
+  fs::copy_to("bundle", [
+    "src",
+    "src" => "dst"
+  ])
+}
